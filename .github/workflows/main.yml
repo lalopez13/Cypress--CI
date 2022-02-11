@@ -1,17 +1,14 @@
-name: Cypress Tests
+name: GH- example
 
 on: [push]
 
 jobs:
-  cypress-run:
+  run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
+      - name: echo a string
+        run: echo "Hello world"
+      - name: multiline script 
+        run: |
+          node -v
+          npm -v
