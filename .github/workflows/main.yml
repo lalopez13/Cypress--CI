@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log node version
-       run: node -v
+        run: node -v
       - uses: actions/setup-node@v1
         with:
           node-version: 6
