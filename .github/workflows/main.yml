@@ -19,4 +19,14 @@ jobs:
         run: Get-Location
       - name: Directory bash
         run: pwd
-        shell: bash 
+        shell: bash
+  node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log node version
+       run: node -v
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 6
+      - name: log node version
+        run: node -v 
